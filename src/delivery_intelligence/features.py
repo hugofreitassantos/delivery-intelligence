@@ -6,7 +6,6 @@ from src.delivery_intelligence.data import load_data
 
 TARGET = "is_late"
 
-# Variáveis numéricas disponíveis no momento do pedido
 NUMERICAL_FEATURES = [
     "n_items",
     "n_distinct_products",
@@ -18,9 +17,6 @@ NUMERICAL_FEATURES = [
     "max_volume_cm3",
     "avg_photos_qty",
     "avg_description_len",
-    "total_payment_value",
-    "max_installments",
-    "n_payment_methods",
     "distance_km",
     "purchase_year",
     "purchase_month",
@@ -38,17 +34,26 @@ NUMERICAL_FEATURES = [
     "weight_per_item_g",
 ]
 
-# Variáveis categóricas
 CATEGORICAL_FEATURES = [
     "primary_category",
-    "payment_type",
     "customer_state",
     "seller_state",
 ]
 
-FEATURE_COLUMNS = (
-    NUMERICAL_FEATURES + CATEGORICAL_FEATURES
-)
+FEATURE_COLUMNS = NUMERICAL_FEATURES + CATEGORICAL_FEATURES
+
+# Variáveis que não devem participar da previsão
+EXCLUDED_FEATURES = [
+    "actual_delivery_days",
+    "days_late",
+    "order_delivered_customer_date",
+    "order_delivered_carrier_date",
+    "order_status",
+    "n_payment_methods",
+    "total_payment_value",
+    "max_installments",
+    "payment_type",
+]
 
 
 def prepare_features():
