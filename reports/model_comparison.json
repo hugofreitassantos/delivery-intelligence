@@ -1,0 +1,71 @@
+{
+    "baseline": {
+        "model": "Baseline",
+        "accuracy": 0.9188867005286617,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "pr_auc": 0.08111329947133825
+    },
+    "logistic_regression": {
+        "model": "Regressão Logística ajustada",
+        "accuracy": 0.7890535917901939,
+        "precision": 0.18007662835249041,
+        "recall": 0.4504792332268371,
+        "f1_score": 0.2572992700729927,
+        "pr_auc": 0.1912706604819103,
+        "threshold": 0.6
+    },
+    "threshold_analysis": [
+        {
+            "threshold": 0.2,
+            "precision": 0.08760548825994603,
+            "recall": 0.9750798722044729,
+            "f1_score": 0.1607669616519174
+        },
+        {
+            "threshold": 0.3,
+            "precision": 0.09789879062225525,
+            "recall": 0.9258785942492013,
+            "f1_score": 0.1770744225834046
+        },
+        {
+            "threshold": 0.4,
+            "precision": 0.11503623188405797,
+            "recall": 0.8115015974440895,
+            "f1_score": 0.20150733835779452
+        },
+        {
+            "threshold": 0.5,
+            "precision": 0.14403464654931544,
+            "recall": 0.6587859424920128,
+            "f1_score": 0.2363865642554167
+        },
+        {
+            "threshold": 0.6,
+            "precision": 0.17558779389694848,
+            "recall": 0.4485623003194888,
+            "f1_score": 0.2523818083767751
+        },
+        {
+            "threshold": 0.7,
+            "precision": 0.22519083969465647,
+            "recall": 0.26389776357827477,
+            "f1_score": 0.24301265077964107
+        },
+        {
+            "threshold": 0.8,
+            "precision": 0.29924242424242425,
+            "recall": 0.10095846645367412,
+            "f1_score": 0.1509794553272814
+        }
+    ],
+    "dataset": {
+        "total_records": 96470,
+        "training_records": 57882,
+        "validation_records": 19294,
+        "test_records": 19294,
+        "features": 32,
+        "random_state": 42
+    }
+}
